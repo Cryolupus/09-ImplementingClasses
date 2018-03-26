@@ -64,15 +64,15 @@ class Point(object):
         return self
 
     def move_to(self, a, b):
-        point2 = Point(a, b) # ??
-        self.distance += self.get_distance_from(point2) # ??
+        point2 = Point(a, b)
+        self.distance += self.get_distance_from(point2)
         self.x = a
         self.y = b
         self.t += 1
 
     def move_by(self, dx, dy):
-        point2 = Point(dx, dy) # ??
-        self.distance += self.get_distance_from(point2) # ??
+        ##point2 = Point(dx, dy) # ??
+        self.distance += math.sqrt(dx**2 + dy**2)
         self.x += dx
         self.y += dy
         self.t += 1
